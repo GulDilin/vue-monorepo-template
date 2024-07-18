@@ -36,6 +36,7 @@ pnpm dev:app-template
 
 1. Copy-paste `lib-package` and rename to `some-lib`
 1. Change `name` in `/packages/some-lib/package.json` to `@example/some-lib`
+1. Change `name` in `/packages/some-lib/vite.config.ts` to `@example/some-lib`
 1. Add scripts `dev`, `build`, `watch`, `preview` to `/packages/some-lib/package.json`
 1. Add scripts to root `package.json`
 

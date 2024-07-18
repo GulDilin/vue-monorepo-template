@@ -11,7 +11,7 @@ module.exports = {
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:import/recommended',
-    // 'plugin:tailwindcss/recommended',
+    'plugin:import/typescript',
   ],
   parser: 'vue-eslint-parser',
   parserOptions: {
@@ -103,7 +103,6 @@ module.exports = {
     'vue/prefer-separate-static-class': 1,
     'vue/prefer-true-attribute-shorthand': 1,
     'vue/no-undef-properties': 'error',
-    // 'tailwindcss/no-custom-classname': 'off',
     'no-extend-native': 'off',
     'space-in-parens': 1,
     'no-unused-vars': 1,

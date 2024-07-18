@@ -7,11 +7,8 @@ import dts from 'vite-plugin-dts'
 export default defineConfig({
   plugins: [
     vue(),
-    // dts(),
     dts({
-      // root: 'src',
       entryRoot: 'src',
-      // tsconfigPath: 'tsconfig.json',
       include: ['./src/**/*.ts', './src/**/*.vue'],
       exclude: ['vite.config.ts'],
     }),
@@ -21,8 +18,6 @@ export default defineConfig({
     outDir: 'dist',
     lib: {
       name: '@example/lib-template',
-      // fileName: '@example/lib-template',
-      // entry: path.resolve(__dirname, "src", "components", "index.ts"),
       entry: path.resolve(__dirname, 'src/index.ts'),
     },
     rollupOptions: {
@@ -44,18 +39,7 @@ export default defineConfig({
           exports: 'named',
         },
       ],
-      // output: {
-      //   // Provide global variables to use in the UMD build
-      //   // for externalized deps
-      //   exports: "named",
-      //   preserveModules: true,
-      //   globals: {
-      //     vue: 'Vue',
-      //   },
-      // },
     },
-    // sourcemap: true,
-    // target: 'esnext'
   },
   resolve: {
     alias: {
