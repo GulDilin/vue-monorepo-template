@@ -1,0 +1,28 @@
+{
+  "name": "@example/lib-template",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "watch": "vite build --watch",
+    "type:check": "tsc --noEmit",
+    "preview": "vite preview"
+  },
+  "exports": {
+    "./components": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./components/*": {
+      "import": "./dist/components/*/*.vue.mjs",
+      "require": "./dist/components/*/*.vue.js",
+      "types": "./dist/components/*/*.vue.d.ts"
+    }
+  },
+  "peerDependencies": {
+    "vue": "catalog:"
+  }
+}
